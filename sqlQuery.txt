@@ -1,0 +1,2 @@
+A query to get the names of the employees from table Employee Column name and in alphabetical order.
+Select name from Employee order by name asc;
