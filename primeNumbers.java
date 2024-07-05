@@ -25,8 +25,29 @@ The step that looks the toughest to understand would be the loop:
 for (int i = 5; i <= Math.sqrt(n); i = i + 6) 
 if (n % i == 0 || n % (i + 2) == 0) return false;
 
-n%i==0 is just making sure each n isn't divisible by i, if it were it wouldn't be prime.
-n%(i+2) ==0 threw me off and I am not sure yet I plan to investigate further,
-although I suspect it has to do with 6n-1/6n+1 
+n%i==0  and n%(i+2) ==0 :This is to check the 6n-1/6n+1 condtions.
 
+Code walkthrough for 101:
 */
+class GFG {
+    static boolean isPrime(101)
+    {
+        // Corner case
+        if (101 <= 1)
+            return false; //keep going 
+ 
+        if (101 == 2 || 101 == 3)
+            return true;  //keep going
+ 
+        if (101 % 2 == 0 || 101 % 3 == 0)
+            return false; //keep going
+ 
+        for (int i = 5; i <= Math.sqrt(101); i = 5 + 6)
+            if (101 % 5 == 0 || 101 % (5 + 2) == 0)
+                return false; //we break out of this loop now though because i = 11 so 11 <= math.sqrt(101) is no longer true
+        
+ 
+        return true; //Since we didn't meet any of the other condtions 101 is a prime so return true.
+    }
+
+   /* As we see, this only took 7 checks instead of the 98 or so it would take to check everything */
