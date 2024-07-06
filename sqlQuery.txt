@@ -1,2 +1,6 @@
 A query to get the names of the employees from table Employee Column name and in alphabetical order.
 Select name from Employee order by name asc;
+
+July 6 quick problem on Hackerrank.
+select city, length(city) from station order by length(city) asc limit 1;
+select city, length(city) from station order by length(city) desc limit 1; 
