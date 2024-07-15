@@ -13,7 +13,32 @@ N - Number
 T - Type
 V - Value
 S,U,V etc. - 2nd, 3rd, 4th types
-
-
-I need to step away, but I will be back to work on this tomorrow! 
+ 
 */
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    public static  <E>void printArray(List<E> inputArray){
+        for(E element: inputArray){
+            System.out.printf("%s \n",element);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        List<Integer> ints=new ArrayList<>();
+        ints.add(1);
+        ints.add(2);
+        ints.add(3);
+        Solution.printArray(ints);
+        List<String> strings=new ArrayList<>();
+        strings.add("Hello");
+        strings.add("World");
+        Solution.printArray(strings);
+        
+    }
+}
+
