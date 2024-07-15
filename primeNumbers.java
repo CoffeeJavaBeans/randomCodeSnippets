@@ -51,3 +51,65 @@ class GFG {
     }
 
    /* As we see, this only took 7 checks instead of the 98 or so it would take to check everything */
+/* Edit! Although I added the following code, it didn't pass becauese the problem needed to use BigInts! */
+/* BigInt code :) */
+public class Solution {
+    
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String n = bufferedReader.readLine();
+        Solution s = new Solution();
+        BigInteger A = new BigInteger(n);
+        if (A.isProbablePrime(1)){
+            System.out.println("prime");
+        }
+        else{
+            System.out.println("not prime");
+        }
+
+        bufferedReader.close();
+    }
+}
+
+
+
+/*old code below :) */
+    
+public class Solution {
+    
+    public boolean isPrimeOrNot(int n){
+        if(n<=1){
+            return false;
+        }
+        if(n==2 || n==3){
+            return true;
+        }
+        if(n%2 == 0 || n%3==0){
+            return false;
+        }
+        for(int i=5; i<=Math.sqrt(n); i=i+6){
+            if(n%i==0 || n%(i+2)==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String n = bufferedReader.readLine();
+        Solution s = new Solution();
+        int nn=Integer.valueOf(n);
+        boolean b=s.isPrimeOrNot(nn);
+        if(b==true){
+            System.out.println("prime");
+        }else{
+            System.out.println("not prime");
+        }
+
+        bufferedReader.close();
+    }
+}
