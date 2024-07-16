@@ -1,0 +1,25 @@
+This is a little bit different, I am considering using my old Mac for training instead of my newer gaming laptop if
+Windows is required.
+
+My main reasons for this are that
+1. I don't want to clutter my gaming laptop with things I don't personally use 
+2. Power consumption - My mac can run on batteries for a long time and uses less power.
+3. When I am done with the training I can just get rid of the Windows partition. 
+
+SOOOO here is what I discovered!
+It turns out Mac already has 'Duel Boot' installed if it has an Intel processor. Luckily for me, I have that.
+All I had to do was download the ISO file from Windows website. 
+
+Okay, so I did the partition with the Windows 10 iso file. It works! So, I went to Oracle to test if I could
+download the Java JDK and also VS code. 
+
+I also went to Spring initializer https://start.spring.io/; to make a really fast hello world java program I 
+could just run...I think I used this command ./mvnw spring-boot:run
+it installed maven dependencies for me and printed the Hello World I wanted to.
+
+For later, I think if I do end up needing my mac for this, I should perhaps factory reset it to give Windows
+as much memory as possible. I will see what I need, I really just wanted to see if this worked.
+
+Right now I can start my mac as a a mac or windows by pressing Alt and chosing which one on startup (If I want
+to switch between them).
+
